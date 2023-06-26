@@ -1,0 +1,30 @@
+package it.epicode.be;
+
+public class Helloworld {
+
+	public static void main (String[] args) {
+	
+		System.out.println("This is my first Epicode Java Project! \n");
+		
+		int res1 = moltiplica(7, 3);
+		System.out.println("Il risultato della moltiplicazione è: " + res1 + "\n");
+		
+		String stringa = "Valore: ";
+		int n = 42;
+		
+		String res2 = concatena(stringa, n);
+		System.out.println("Il risultato della concaenazione è: " + res2);
+		
+	}
+	
+	public static int moltiplica(int n1, int n2) {
+		int result = n1 * n2;
+		return result;
+	}
+	
+	public static String concatena(String stringa, int n) {
+		String result = stringa + n;
+		return result;
+	}
+
+}
