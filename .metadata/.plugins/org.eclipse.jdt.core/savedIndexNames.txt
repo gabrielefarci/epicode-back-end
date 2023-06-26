@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+/Users/gabriele/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+3981961839.index
+4195947893.index
+1865797976.index
+3210918836.index
+283369149.index
