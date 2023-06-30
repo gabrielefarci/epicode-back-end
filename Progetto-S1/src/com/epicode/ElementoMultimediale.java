@@ -1,6 +1,6 @@
 package com.epicode;
 
-public class ElementoMultimediale {
+public class ElementoMultimediale implements Riproducibile, Visualizzabile {
 	
 	protected String titolo;
 	
