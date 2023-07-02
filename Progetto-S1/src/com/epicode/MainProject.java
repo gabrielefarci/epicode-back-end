@@ -8,14 +8,54 @@ public class MainProject {
 		
 		ElementoMultimediale[] elementi = new ElementoMultimediale[5];
 		
-		elementi[0] = new Immagine("Immagine 1", 2);
-		elementi[1] = new Immagine("Immagine 2", 6);
-		elementi[2] = new Video("Video 1", 2, 5, 3);
-		elementi[3] = new RegistrazioneAudio("Audio 1", 5, 3);
-		elementi[4] = new RegistrazioneAudio("Audio 2", 1, 5);
-		
 		Scanner sc = new Scanner(System.in);
         int scelta;
+        
+        for(int i = 0; i < 5; i++) {
+        	if(i > 0) {
+        		System.out.println("-------------------------");
+        	}
+        	System.out.println("Crea 5 elementi: \n" + "Inserisci 1 per creare un immagine. \n" + "Inserisci 2 per creare un video. \n" + "Inserisci 3 per creare una registeazione audio.");
+        	scelta = sc.nextInt();
+        	
+        	if(scelta == 1) {
+        		System.out.print("Inserisci il titolo dell'immagine: ");
+        		String titolo = sc.next();
+        		
+            	System.out.print("Inserisci la luminosità dell'immagine: ");
+            	int luminosita = sc.nextInt();
+            	
+            	elementi[i] = new Immagine(titolo, luminosita);
+            	System.out.println("Hai creato un immagine! \n");
+            }else if(scelta == 2) {
+            	System.out.print("Inserisci il titolo del video: ");
+        		String titolo = sc.next();
+        		
+            	System.out.print("Inserisci la durata del video: ");
+            	int durata = sc.nextInt();
+            	
+            	System.out.print("Inserisci il volume del video: ");
+            	int volume = sc.nextInt();
+            	
+            	System.out.print("Inserisci la luminosità del video: ");
+            	int luminosita = sc.nextInt();
+            	
+            	elementi[i] = new Video(titolo, durata, volume, luminosita);	
+            	System.out.println("Hai creato un video! \n");
+            }else if(scelta == 3) {
+            	System.out.print("Inserisci il titolo della registrazione audio: ");
+        		String titolo = sc.next();
+        		
+            	System.out.print("Inserisci la durata della registrazione audio: ");
+            	int durata = sc.nextInt();
+            	
+            	System.out.print("Inserisci il volume della registrazione audio: ");
+            	int volume = sc.nextInt();
+            	
+            	elementi[i] = new RegistrazioneAudio(titolo, durata, volume);
+            	System.out.println("Hai creato una registrazione audio! \n");
+            }
+        }
         
         do {
             System.out.println("Seleziona l'elemento da eseguire (1-5) o 0 per uscire:");

@@ -35,9 +35,9 @@ public class Video extends ElementoMultimediale implements Riproducibile {
 
     @Override
     public void play() {
-    	System.out.print("Riproduzione del video:");
+    	System.out.print("Riproduzione del video: ");
         for(int i = 0; i < durata; i++) {
-        	System.out.print(" " + titolo + " ");
+        	System.out.print(titolo);
             for(int j = 0; j < volume; j++) {
                 System.out.print("!");
             }

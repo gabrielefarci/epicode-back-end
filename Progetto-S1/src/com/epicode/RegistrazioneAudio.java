@@ -22,9 +22,9 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Riproduc
 
     @Override
     public void play() {
-    	System.out.print("Riproduzione della registrazione audio:");
+    	System.out.print("Riproduzione della registrazione audio: ");
         for (int i = 0; i < durata; i++) {
-        	System.out.print(" " + titolo + " ");
+        	System.out.print(titolo);
             for (int j = 0; j < volume; j++) {
                 System.out.print("!");
             }
