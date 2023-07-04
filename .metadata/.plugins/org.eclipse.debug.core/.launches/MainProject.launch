@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/lezione_1/src/com/epicode/MainProject.java"/>
+        <listEntry value="/Esercizio-S2-G2/src/com/epicode/es1/mainProject.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.epicode.MainProject"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.epicode.es1.mainProject"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="lezione_1"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Esercizio-S2-G2"/>
 </launchConfiguration>
