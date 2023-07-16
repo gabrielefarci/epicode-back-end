@@ -19,7 +19,7 @@ public class MainProject {
 		
 		Scanner sc = new Scanner(System.in);
 		int scelta;
-		
+        
 		Random random = new Random();
 		
 		do {
