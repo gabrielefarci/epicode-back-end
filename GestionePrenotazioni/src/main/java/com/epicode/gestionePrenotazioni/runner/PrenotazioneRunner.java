@@ -35,10 +35,10 @@ public class PrenotazioneRunner implements CommandLineRunner {
         Prenotazione prenotazione1 = new Prenotazione();
         prenotazione1.setPostazione(postazioneEsistente);
         prenotazione1.setUtente(utenteEsistente);
-        prenotazione1.setData(LocalDate.now());
+        prenotazione1.setData(LocalDate.of(2023, 8, 2));
 
-//      Prenotazione prenotazioneCreata = prenotazioneService.createPrenotazione(prenotazione1);
-//      System.out.println("Prenotazione con ID " + prenotazioneCreata.getId() + " creata");
+      Prenotazione prenotazioneCreata = prenotazioneService.createPrenotazione(prenotazione1);
+      System.out.println("Prenotazione con ID " + prenotazioneCreata.getId() + " creata");
     }
 
 }
