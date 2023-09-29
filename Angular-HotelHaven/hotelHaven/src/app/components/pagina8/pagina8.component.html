@@ -1,0 +1,51 @@
+<div class="container">
+  <div>
+    <div *ngIf="sharedService.uploadedImageUrls.length == 0">
+      <h1>Aggiungi foto del tuo alloggio</h1>
+      <p class="subtitles">Per iniziare ti serviranno 5 foto. In seguito, potrai aggiungerne delle altre o<br>modificare quelle esistenti.</p>
+      <div class="box-foto1">
+        <ngx-dropzone [accept]="'image/*'" (change)="firstImageDrop($event)" (removed)="firstImageRemoved($event)" id="first-image">
+          <ngx-dropzone-label>
+            <span class="material-symbols-outlined">imagesmode</span>
+            Trascina o clicca per caricare un'immagine
+          </ngx-dropzone-label>
+        </ngx-dropzone>
+      </div>
+    </div>
+    <div class="immagini-caricate" *ngIf="sharedService.uploadedImageUrls.length > 0">
+      <div class="title">
+        <div>
+          <h5>Scegli almeno 5 foto</h5>
+          <p>Trascina per riordinare</p>
+        </div>
+        <div>
+          <button>
+            <span class="material-symbols-outlined">
+              add
+            </span>
+            Aggiungi altre
+          </button>
+        </div>
+      </div>
+      <div class="immagine" *ngFor="let imageUrl of sharedService.uploadedImageUrls">
+          <img [src]="imageUrl">
+      </div>
+      <div class="box-foto2">
+        <div class="immagini" *ngFor="let imagesUrl of uploadedImages">
+          <img [src]="imagesUrl">
+        </div>
+        <ngx-dropzone [accept]="'image/*'" (change)="imagesDrop($event)" (removed)="imagesRemoved($event)" *ngFor="let i of dropzoneIndices; let lastIndex = last" class="extra-foto">
+          <ngx-dropzone-label><span class="material-symbols-outlined">imagesmode</span></ngx-dropzone-label>
+        </ngx-dropzone>
+        <ngx-dropzone class="add-dropzone extra-foto" (mousedown)="addDynamicDropzone()">
+          <ngx-dropzone-label>
+            <span class="material-symbols-outlined">
+              add
+            </span>
+            Aggiungi altre
+          </ngx-dropzone-label>
+        </ngx-dropzone>
+      </div>
+    </div>
+  </div>
+</div>

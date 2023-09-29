@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.box1 h5, .box2 h5 {
+  display: flex;
+  align-items: center;
+}
+
+.box1 span , .box2 span {
+  margin-left: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.box1 span:hover , .box2 span:hover {
+  background-color: #b1b1b137;
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+}
+
+.box1 div {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.box1 div, .box1 input, .box1 label, .box2 div, .box2 input, .box2 label {
+  cursor: pointer;
+}
+
+.box1 div label {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.box1 input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+#radio1:checked, #radio2:checked {
+  accent-color: #000;
+}
+
+.box2 div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.box2 label {
+  width: 100%;
+}
+
+#check1, #check2, #check3 {
+  width: 20px;
+  height: 20px;
+}
+
+#check1:checked, #check2:checked, #check3:checked {
+  accent-color: #000;
+}
+
+.container-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.centered-container {
+  position: relative;
+  z-index: 2;
+}
+
+.info {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 1px #00000012;
+  padding: 20px;
+  animation: openInfoAnimation 0.5s ease forwards;
+  transform-origin: center;
+  transform: scale(0);
+  position: relative;
+}
+
+.closeInfo {
+  animation: closeInfoAnimation 0.5s ease forwards;
+  transform-origin: center;
+  transform: scale(1);
+}
+
+.info span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+@keyframes openInfoAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes closeInfoAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

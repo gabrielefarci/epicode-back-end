@@ -1,0 +1,43 @@
+<div *ngIf="sharedService.paginaCorrente === 1">
+  <app-pagina1></app-pagina1>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 2">
+  <app-pagina2></app-pagina2>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 3">
+  <app-pagina3></app-pagina3>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 4">
+  <app-pagina4></app-pagina4>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 5">
+  <app-pagina5></app-pagina5>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 6">
+  <app-pagina6></app-pagina6>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 7">
+  <app-pagina7></app-pagina7>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 8">
+  <app-pagina8></app-pagina8>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 9">
+  <app-pagina9></app-pagina9>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 10">
+  <app-pagina10></app-pagina10>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 11">
+  <app-pagina11></app-pagina11>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 12">
+  <app-pagina12></app-pagina12>
+</div>
+<div *ngIf="sharedService.paginaCorrente === 13">
+  <app-pagina13></app-pagina13>
+</div>
+<router-outlet></router-outlet>
+<div class="progress-bar">
+  <div class="progress" [style.width.%]="getProgress()"></div>
+</div>

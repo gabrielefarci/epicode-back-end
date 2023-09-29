@@ -1,0 +1,11 @@
+<div *ngIf="cities.length > 0">
+  <h2>Elenco delle città</h2>
+  <ul>
+    <li *ngFor="let city of cities">
+      {{ city.name }} ({{ city.country }})
+    </li>
+  </ul>
+</div>
+<div *ngIf="cities.length === 0">
+  <p>Nessuna città disponibile.</p>
+</div>

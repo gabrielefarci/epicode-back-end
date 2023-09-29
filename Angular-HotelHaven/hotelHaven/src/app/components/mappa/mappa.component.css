@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+  padding: 0;
+}
+
+.box-address {
+  position: relative;
+}
+
+app-address-autocomplete {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+img {
+  border-radius: 10px;
+}

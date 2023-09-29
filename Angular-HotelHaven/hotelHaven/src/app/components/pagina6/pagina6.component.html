@@ -1,0 +1,38 @@
+<div class="container">
+  <div>
+    <h1>Condividi alcune informazioni di base sul<br>tuo alloggio</h1>
+    <p class="subtitles">Potrai aggiungere ulteriori dettagli in seguito, come i tipi di letto.</p>
+    <div class="ospiti info">
+      <p>Ospiti</p>
+      <div>
+        <button (click)="decrease1()" [disabled]="count1 === 0">-</button>
+        <span>{{ count1 }}</span>
+        <button (click)="increase1()" [disabled]="count1 === 16">+</button>
+      </div>
+    </div>
+    <div class="camere info">
+      <p>Camere da letto</p>
+      <div>
+        <button (click)="decrease2()" [disabled]="count2 === 0">-</button>
+        <span>{{ count2 }}</span>
+        <button (click)="increase2()" [disabled]="count2 === 50">+</button>
+      </div>
+    </div>
+    <div class="letti info">
+      <p>Letti</p>
+      <div>
+        <button (click)="decrease3()" [disabled]="count3 === 1">-</button>
+        <span>{{ count3 }}</span>
+        <button (click)="increase3()" [disabled]="count3 === 50">+</button>
+      </div>
+    </div>
+    <div class="bagni info">
+      <p>Bagni</p>
+      <div>
+        <button (click)="decrease4()" [disabled]="count4 === 0">-</button>
+        <span>{{ count4 }}</span>
+        <button (click)="increase4()" [disabled]="count4 === 50">+</button>
+      </div>
+    </div>
+  </div>
+</div>

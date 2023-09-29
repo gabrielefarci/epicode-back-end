@@ -1,0 +1,23 @@
+<div class="input-address">
+  <span class="material-symbols-outlined" id="location">
+    location_on
+  </span>
+  <input #addressInput type="text" [(ngModel)]="address" [typeahead]="suggestions" typeaheadOptionField="formatted_address"
+    (typeaheadOnSelect)="address = $event.item.formatted_address"
+    (typeaheadNoResults)="suggestions = []"
+    [typeaheadMinLength]="3"
+    placeholder="Inserisci il tuo indirizzo"
+    class="form-control"
+    name="addressInput"
+    (click)="toggleDiv(); $event.stopPropagation()"
+    (input)="searchAddress(addressInput.value)"
+  />
+  <div *ngIf="isDivOpen" class="address-box" [style.height]="divHeight">
+    <ul *ngIf="suggestions.length > 0" id="address-list">
+      <li *ngFor="let suggestion of suggestions">
+        <span class="material-symbols-outlined" id="city-icon">location_city</span>
+        <a (click)="selectSuggestion(suggestion)">{{ suggestion.formatted_address }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="box">
+  <div>
+    <h1>Controlla il tuo annuncio</h1>
+    <p class="subtitles">Ecco cosa mostreremo agli ospiti. Assicurati che tutto sia in ordine.</p>
+    <div>
+      <div class="container-fluid">
+        <div class="card">
+          <img src="{{ sharedService.uploadedImageUrls }}" class="card-img-top">
+          <div class="preview">Anteprima</div>
+          <div class="card-body">
+            <p class="card-price"><span *ngIf="!sharedService.showCustomPrice">{{ sharedService.defaultPrice }} €</span><span *ngIf="sharedService.showCustomPrice">{{ sharedService.customPrice }} €</span> notte</p>
+            <p class="card-text">Nuovo <span class="material-symbols-outlined">star</span></p>
+          </div>
+        </div>
+        <div class="box2">
+          <h2>E ora?</h2>
+          <div>
+            <div class="icon-box">
+              <span class="material-symbols-outlined">task</span>
+            </div>
+            <div class="content-box">
+              <h3>Conferma alcuni dettagli e pubblica il tuo<br>annucio</h3>
+              <p>Laddove fosse necessario verificare la tua identità o<br>registrare il tuo alloggio presso l'amministrazione<br>locale, avremo cura di informarti.</p>
+            </div>
+          </div>
+          <div>
+            <div class="icon-box">
+              <span class="material-symbols-outlined">calendar_month</span>
+            </div>
+            <div class="content-box">
+              <h3>Imposta il tuo calendario</h3>
+              <p>Scegli le date in cui il tuo alloggio è disponibile. Sarà<br>mostrato dopo 24 ore dalla pubblicazione.</p>
+            </div>
+          </div>
+          <div>
+            <div class="icon-box">
+              <span class="material-symbols-outlined">edit</span>
+            </div>
+            <div class="content-box">
+              <h3>Modifica le impostazioni</h3>
+              <p>Stabilisci le regole della casa, seleziona i termini di<br>cancellazione, scegli come possono prenotare gli ospiti<br>e altro ancora.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="full-preview">
+  <h5>Anteprima completa</h5>
+  <div class="box3">
+    <div>
+      <img src="{{ sharedService.uploadedImageUrls }}">
+    </div>
+    <div>
+      <h4>{{ sharedService.selectedDiv === 0 ? 'Intero alloggio' : sharedService.selectedDiv === 1 ? 'Stanza' : sharedService.selectedDiv === 2 ? 'Stanza condivisa' : '' }}: {{ sharedService.selectedDiv2 === 0 ? 'casa' : sharedService.selectedDiv2 === 1 ? 'appartamento' : sharedService.selectedDiv2 === 2 ? 'b&b' : sharedService.selectedDiv2 === 3 ? 'baita' : sharedService.selectedDiv2 === 4 ? 'camper o roulotte' : sharedService.selectedDiv2 === 5 ? 'fattoria' : sharedService.selectedDiv2 === 6 ? 'casa sull\'albero' : sharedService.selectedDiv2 === 7 ? 'trullo' : ''}}<br>
+      Host: {{ sharedService.name }}</h4>
+    </div>
+  </div>
+</div>

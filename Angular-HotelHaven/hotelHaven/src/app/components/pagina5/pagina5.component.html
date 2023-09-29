@@ -1,0 +1,48 @@
+<div class="container">
+  <div>
+    <h1>Conferma il tuo indirizzo</h1>
+    <p class="subtitles">Il tuo indirizzo viene condiviso con gli ospiti solo dopo che hanno effettuato<br>una prenotazione.</p>
+    <form class="address-box" #f="ngForm">
+      <div class="select-country">
+        <select name="country">
+          <option value="">Paese o regione</option>
+          <option *ngFor="let country of countries" [value]="country.alpha2Code">{{ country.name.common }} - {{country.cca2}}</option>
+        </select>
+      </div>
+      <div class="first-address">
+        <input type="text" id="address1" name="indirizzo-1" required [(ngModel)]="indirizzo1" (input)="onIndirizzo1InputChange()">
+        <label for="address1">Indirizzo 1</label>
+      </div>
+      <div class="second-address">
+        <input type="text" id="address2" name="indirizzo-2">
+        <label for="address2">Indirizzo 2</label>
+      </div>
+      <div class="third-address">
+        <input type="text" id="address3" name="indirizzo-3">
+        <label for="address3">Indirizzo 3</label>
+      </div>
+      <div class="fourth-address">
+        <input type="text" id="address4" name="indirizzo-4">
+        <label for="address4">Indirizzo 4</label>
+      </div>
+      <div class="country">
+        <input type="text" id="city" name="città" [(ngModel)]="selectedCity">
+        <label for="city" [class.active]="selectedCity" id="city-label">Città/paese</label>
+      </div>
+      <div class="state-province">
+        <input type="text" id="state-input" name="stato">
+        <label for="state-input">Stato/provincia</label>
+      </div>
+      <div class="postal-code">
+        <input type="text" id="postal-code-input" name="codice-postale">
+        <label for="postal-code-input">Codice postale</label>
+      </div>
+    </form>
+  </div>
+  <div class="map">
+    <img *ngIf="isIndirizzoInserito; else defaultMap" [src]="'https://maps.googleapis.com/maps/api/staticmap?center=' + selectedAddress + '&zoom=12&size=600x250&key=AIzaSyDtEAPXpQJ6RwvKEatZSAvnrOXliE8XzN4'" alt="Mappa">
+    <ng-template #defaultMap>
+      <img [src]="'https://maps.googleapis.com/maps/api/staticmap?center=' + selectedCity + '&zoom=11&size=600x250&key=AIzaSyDtEAPXpQJ6RwvKEatZSAvnrOXliE8XzN4'" alt="Mappa">
+    </ng-template>
+  </div>
+</div>

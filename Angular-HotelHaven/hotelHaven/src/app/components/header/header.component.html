@@ -1,0 +1,41 @@
+<header>
+  <div id="logo">
+    <img src="../../../assets/logo.png" alt="Logo Hotel Haven">
+    <span>hotel haven</span>
+  </div>
+  <div id="filters">
+    <ul>
+      <li>Destinazione</li>
+      <li>Date</li>
+      <li>Ospiti
+        <span class="material-symbols-outlined" id="search-icon">
+          search
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="right-menu">
+    <a *ngIf="accessToken" [routerLink]="['/addHome']">Aggiungi alloggio</a>
+    <div>
+      <span class="material-symbols-outlined" id="language">
+        language
+      </span>
+    </div>
+    <div id="account" (click)="toggleDropdown()">
+      <span class="material-symbols-outlined" id="menu">
+        menu
+      </span>
+      <span class="material-symbols-outlined" id="user">
+        account_circle
+      </span>
+    </div>
+    <div id="myDropdown" class="dropdown-content" *ngIf="sharedService.isDropdownVisible">
+      <a (click)="sharedService.toggleRegister()" *ngIf="!accessToken">Registrati</a>
+      <a (click)="sharedService.toggleLogin()" *ngIf="!accessToken">Accedi</a>
+      <a *ngIf="accessToken">Preferiti</a>
+      <hr>
+      <a>Centro Assistenza</a>
+      <a (click)="logout()" *ngIf="accessToken">Esci</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,56 @@
+.input-address {
+  position: relative;
+}
+
+#location {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  z-index: 1;
+}
+
+.form-control {
+  width: 500px;
+  border: none;
+  border-radius: 30px;
+  padding: 20px 50px;
+  outline: #000;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  box-shadow: 0 0 0 2px #000;
+  border-radius: 20px;
+}
+
+.address-box {
+  width: 500px;
+  position: absolute;
+  top: 0;
+  border-radius: 30px;
+  background-color: #fff;
+  height: 100px;
+  z-index: -1;
+}
+
+#address-list {
+  padding-top: 80px;
+  padding-left: 0;
+  list-style: none;
+}
+
+#address-list li {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#address-list li:hover {
+  background-color: #dddddd;
+}
+
+#city-icon {
+  margin-right: 10px;
+}

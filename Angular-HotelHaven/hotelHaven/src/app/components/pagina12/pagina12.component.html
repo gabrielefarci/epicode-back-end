@@ -1,0 +1,66 @@
+<div class="container">
+  <div>
+    <h1>Manca solo l'ultimo passaggio!</h1>
+    <div class="box1">
+      <h5>Come affitti su HotelHaven?<span class="material-symbols-outlined" id="btn-info1" (click)="toggleInfo1()">info</span></h5>
+      <div>
+        <input type="radio" id="radio1" name="rentalOption" value="private"><label for="radio1">Affitto come privato</label>
+      </div>
+      <div>
+        <input type="radio" id="radio2" name="rentalOption" value="professional"><label for="radio2">Affitto come professionista</label>
+      </div>
+    </div>
+    <div class="box2">
+      <h5>Nel tuo alloggio sono presenti uno o più servizi tra i seguenti?<span class="material-symbols-outlined" id="btn-info2" (click)="toggleInfo2()">info</span></h5>
+      <div>
+        <label for="check1">Telecamera di sorveglianza</label><input type="checkbox" id="check1">
+      </div>
+      <div>
+        <label for="check2">Armi</label><input type="checkbox" id="check2">
+      </div>
+      <div>
+        <label for="check3">Animali pericolosi</label><input type="checkbox" id="check3">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-info" *ngIf="buttonClicked1">
+  <div class="info info1" [ngClass]="{ 'closeInfo': closeInfo1 }">
+    <span class="material-symbols-outlined" (click)="toggleCloseInfo1()">close</span>
+    <div>
+      <p>Affittare come un professionista</p>
+      <p>Generalmente affitti come un professionista se si<br>tratta della tua professione o fonte di reddito<br>principale, o fai parte di un'impresa consolidata, come<br>una società di gestione immobiliare.</p>
+    </div>
+    <div>
+      <p>Affittare come privato</p>
+      <p>Generalmente affitti come privato se non si tratta della<br>tua professione o fonte di reddito principale.</p>
+    </div>
+    <div>
+      <p>Queste informazioni ci permettono di offrirti<br>funzionalità adeguate in base alla tua tipologia di<br>ospitalità e di rispettare le leggi sulla tutela dei<br>consumatori.</p>
+    </div>
+    <div>
+      <button (click)="toggleCloseInfo1()">Fatto</button>
+    </div>
+  </div>
+</div>
+<div class="container-info" *ngIf="buttonClicked2">
+  <div class="info info2" [ngClass]="{ 'closeInfo': closeInfo2 }">
+    <span class="material-symbols-outlined" (click)="toggleCloseInfo2()">close</span>
+    <div>
+      <p>Telecamera di sorveglianza</p>
+      <p>Gli host sono tenuti a indicare tutte le telecamere di<br>sorveglianza e altri dispositivi di registrazione presenti<br>nei loro alloggi. I dispositivi di registrazione<br>intenzionalmente nascosti o situati all'interno di<br>camere da letto e bagni sono vietati.</p>
+    </div>
+    <div>
+      <p>Armi</p>
+      <p>Tutte le armi presenti in un alloggio devono essere<br>opportunamente dichiarate e riposte in un luogo<br>adeguato e sicuro.</p>
+    </div>
+    <div>
+      <p>Animali pericolosi</p>
+      <p>Gli host non devono tenere un animale potenzialmente<br>pericoloso (in grado di arrecare danni gravi alle<br>persone o ad altri animali) in un alloggio senza<br>comunicarne adeguatamente la presenza e metterlo in<br>assoluta sicurezza.</p>
+    </div>
+    <div>
+      <button (click)="toggleCloseInfo2()">Fatto</button>
+    </div>
+  </div>
+</div>
+
