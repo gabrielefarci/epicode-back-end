@@ -1,0 +1,23 @@
+<div class="container">
+  <div>
+    <h1>Fai conoscere agli utenti tutti i servizi del<br>tuo alloggio</h1>
+    <p>Potrai aggiungerne degli altri dopo la pubblicazione dell'annuncio.</p>
+    <div class="selection-services">
+      <div *ngFor="let div of divs1; let i = index" (click)="onClickDiv1(i)" [class.selected]="isDivSelected1(i)">
+        <span class="material-symbols-outlined" *ngIf="div.icon">{{ div.icon }}</span> {{ div.label }}
+      </div>
+    </div>
+    <h5>Offri qualche servizio di particolare interesse?</h5>
+    <div class="selection-services">
+      <div *ngFor="let div of divs2; let i = index" (click)="onClickDiv2(i)" [class.selected]="isDivSelected2(i)">
+        <span class="material-symbols-outlined" *ngIf="div.icon">{{ div.icon }}</span> {{ div.label }}
+      </div>
+    </div>
+    <h5>Disponi di uno di questi sistemi di sicurezza?</h5>
+    <div class="selection-services">
+      <div *ngFor="let div of divs3; let i = index" (click)="onClickDiv3(i)" [class.selected]="isDivSelected3(i)">
+        <span class="material-symbols-outlined" *ngIf="div.icon">{{ div.icon }}</span> {{ div.label }}
+      </div>
+    </div>
+  </div>
+</div>

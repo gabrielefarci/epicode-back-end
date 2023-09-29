@@ -1,0 +1,32 @@
+<div class="container">
+  <div>
+    <div class="title">
+      <h1>Ora imposta il prezzo</h1>
+      <p class="subititles">Puoi modificarlo in qualsiasi momento.</p>
+    </div>
+    <div class="price-input">
+      <div class="box-price">
+        <input type="text" [(ngModel)]="sharedService.defaultPrice" (input)="startEditingPrice()">
+        <button><span class="material-symbols-outlined">edit</span></button>
+      </div>
+      <p (click)="toggleBoxVisibility()" *ngIf="!isBoxExpanded">Prezzo per l'ospite: <span>{{ totalPrice }}</span> € <span class="material-symbols-outlined">expand_more</span></p>
+      <div class="box box1" *ngIf="isBoxExpanded" (click)="toggleBox1Visibility()" [ngClass]="{ 'expanded': isBox1ContentVisible }">
+        <p *ngIf="!isBox1ContentVisible">Prezzo di base <span>40€</span></p>
+        <p *ngIf="!isBox1ContentVisible">Costi del servizio dell'ospite <span>6€</span></p>
+        <p *ngIf="!isBox1ContentVisible">Imposte <span>4€</span></p>
+        <p *ngIf="isBox1ContentVisible">Prezzo per l'ospite <span>{{ totalPrice }}€</span></p>
+        <p *ngIf="!isBox1ContentVisible">Prezzo per l'ospite <span>{{ totalPrice }}€</span></p>
+      </div>
+      <div class="box box2" *ngIf="isBoxExpanded" (click)="toggleBox2Visibility()" [ngClass]="{ 'expanded': isBox2ContentVisible }">
+        <p *ngIf="!isBox2ContentVisible">Prezzo di base <span>40€</span></p>
+        <p *ngIf="!isBox2ContentVisible">Costi del servizio dell'host <span>-1€</span></p>
+        <p *ngIf="isBox2ContentVisible">Guadagni <span></span></p>
+        <p *ngIf="!isBox2ContentVisible">Guadagni <span></span></p>
+      </div>
+      <p *ngIf="isBoxExpanded" (click)="toggleBoxVisibility()">Mostra meno <span class="material-symbols-outlined">expand_less</span></p>
+    </div>
+    <div>
+
+    </div>
+  </div>
+</div>

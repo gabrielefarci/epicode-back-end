@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  width: 600px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.content-box {
+  margin-left: 10px;
+}
+
+.content-box p {
+  color: #9e9e9e;
+  font-weight: 300;
+}
+
+.photo-box {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.photo-box img {
+  width: 100px;
+}

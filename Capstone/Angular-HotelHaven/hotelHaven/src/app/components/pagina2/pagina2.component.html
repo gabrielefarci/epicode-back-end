@@ -1,0 +1,11 @@
+<div class="container">
+  <div>
+    <h1>Quale di queste opzioni descrive meglio il<br>tuo alloggio?</h1>
+    <div class="home-option">
+      <div *ngFor="let div of divs; let i = index" (click)="onClickDiv(i)" [class.selected]="sharedService.selectedDiv2 === i">
+        <img [src]="div.icon" alt="{{ div.label }}">
+        {{ div.label }}
+      </div>
+    </div>
+  </div>
+</div>

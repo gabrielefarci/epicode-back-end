@@ -1,0 +1,141 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+#logo {
+  position: relative;
+}
+
+#logo img {
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+#logo span {
+  position: absolute;
+  bottom: 20px;
+  right: -70px;
+  color: #f95757;
+}
+
+#filters {
+  border: 1px solid #dedede;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#filters:hover {
+  box-shadow: 0 1px 4px 0 rgba(128, 128, 128, 0.448);
+}
+
+#filters ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#filters li {
+  padding: 0 20px 0 20px;
+  border-right: 1px solid #dddddd;
+}
+
+#filters li:last-child {
+  border-right: none;
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+}
+
+#search-icon {
+  margin-left: 15px;
+  font-size: 20px;
+  background-color: #f9385c;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#language {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 20px;
+  color: #000000be;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#language:hover {
+  background-color: #6262621f;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#account {
+  border: 1px solid #dedede;
+  border-radius: 30px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#account:hover {
+  box-shadow: 0 1px 4px 0 rgba(128, 128, 128, 0.448);
+}
+
+#menu {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.material-symbols-outlined {
+  color: #626262;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -140px;
+  left: -45px;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 170px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.077);
+  padding: 10px 0;
+}
+
+.dropdown-content a {
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 2.5em;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  background-color: #6262621f;
+}
+
+.dropdown-content hr {
+  width: 100%;
+  padding: 0;
+}

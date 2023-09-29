@@ -1,0 +1,51 @@
+<div class="btn-start" *ngIf="sharedService.paginaCorrente === 1">
+  <button (click)="sharedService.nextComponent()">Inizia</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 2">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next" [disabled]="!isDivSelezionato()">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 3">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 4">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next" [disabled]="!isCitySelected">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 5">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next" [disabled]="isButtonDisabled1()">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 6">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 7">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 8">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 9">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next" [disabled]="isButtonDisabled2()">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 10">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 11">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 12">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next">Avanti</button>
+</div>
+<div class="footer-btn" *ngIf="sharedService.paginaCorrente === 13">
+  <button (click)="sharedService.previousComponent()" class="btn-back">Indietro</button>
+  <button (click)="sharedService.nextComponent()" class="btn-next">Avanti</button>
+</div>

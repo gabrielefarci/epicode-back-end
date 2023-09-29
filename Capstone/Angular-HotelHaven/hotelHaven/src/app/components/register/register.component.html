@@ -1,0 +1,26 @@
+<div id="container">
+  <div id="register-box">
+    <h3><span class="material-symbols-outlined" id="close-btn" (click)="closeComponent()">
+      close
+    </span>Registrati</h3>
+    <form id="form" #f="ngForm" (ngSubmit)="onSubmit()">
+        <h1>Ti diamo il benvenuto su HotelHaven</h1>
+        <div class="input-box">
+          <input type="text" id="name" ngModel placeholder="Nome" name="name" #inputElement>
+        </div>
+        <!-- <div class="input-box">
+          <input type="text" id="lastname" ngModel placeholder="Cognome" name="lastname">
+        </div> -->
+        <div class="input-box">
+          <input type="text" id="username" ngModel placeholder="Username" required name="username">
+        </div>
+        <div class="input-box">
+          <input type="email" id="email" ngModel placeholder="Email" required name="email">
+        </div>
+        <div class="input-box">
+          <input type="password" id="password" ngModel placeholder="Password" required name="password">
+        </div>
+        <button type="submit" id="btn-register">Continua</button>
+    </form>
+  </div>
+</div>

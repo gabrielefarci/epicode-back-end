@@ -1,0 +1,6 @@
+<app-register *ngIf="sharedService.isRegisterVisible" (closeRegistration)="closeRegister()"></app-register>
+<app-login *ngIf="sharedService.isLoginVisible" (closeLogin)="closeLogin()"></app-login>
+<app-footer-btn *ngIf="isAddHomeVisible"></app-footer-btn>
+<router-outlet></router-outlet>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />

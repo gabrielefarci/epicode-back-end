@@ -1,0 +1,17 @@
+<div id="container">
+  <div id="login-box">
+    <h3><span class="material-symbols-outlined" id="close-btn" (click)="closeComponent()">
+      close
+    </span>Accedi</h3>
+    <form id="form" #f="ngForm" (ngSubmit)="onSubmit()">
+        <h1>Ti diamo il benvenuto su HotelHaven</h1>
+        <div class="input-box">
+          <input type="text" id="username" ngModel placeholder="Username" required name="username" #inputElement>
+        </div>
+        <div class="input-box">
+          <input type="password" id="password" ngModel placeholder="Password" required name="password">
+        </div>
+        <button type="submit" id="btn-login">Continua</button>
+    </form>
+  </div>
+</div>

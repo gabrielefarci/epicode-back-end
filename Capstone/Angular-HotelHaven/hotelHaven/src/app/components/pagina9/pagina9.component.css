@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  position: relative;
+}
+
+.textarea textarea {
+  outline: none;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #808080;
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+}
+
+.textarea textarea:focus {
+  box-shadow: 0 0 0 2px #000;
+}
+
+.textarea span {
+  color: #717171;
+}
